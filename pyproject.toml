@@ -25,6 +25,7 @@ dependencies = [
     "accelerate",
     "msgpack",
     "modelscope",
+    "protobuf",
     "torch<2.10.0",
     "transformers>=4.56.0,<=4.57.3",
     "flashinfer-python>=0.5.3",

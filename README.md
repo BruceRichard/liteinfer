@@ -124,6 +124,19 @@ python -m liteinfer --model "meta-llama/Llama-3.1-70B-Instruct" --tp 4 --port 30
 
 服务启动后，可以使用标准工具如 `curl` 或任意 OpenAI 兼容客户端发送请求。
 
+> **💡 使用 ModelScope 下载模型**：如果从 HuggingFace 下载模型遇到网络问题，可以通过 `--model-source modelscope` 从 ModelScope 下载：
+> ```bash
+> # 使用 ModelScope 下载并部署
+> python -m liteinfer --model "Qwen/Qwen3-0.6B" --model-source modelscope
+> ```
+>
+> 也可以先用 `modelscope` CLI 预先下载模型，再指定本地路径使用：
+> ```bash
+> pip install modelscope
+> modelscope download Qwen/Qwen3-0.6B --local_dir ./models/Qwen3-0.6B
+> python -m liteinfer --model "./models/Qwen3-0.6B"
+> ```
+
 ### 4. 交互式 Shell
 
 添加 `--shell` 参数即可在终端中直接与模型对话。

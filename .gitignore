@@ -35,3 +35,6 @@ env/
 # agent
 AGENTS.md
 CLAUDE.md
+
+# local env scripts
+env.sh
